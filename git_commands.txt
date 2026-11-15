@@ -1,0 +1,71 @@
+Git commands used in this assignment
+
+1. git config user.name "Assignment Student"
+   Sets the commit author name for this repository (replace with your own name when recreating locally).
+
+2. git config user.email "student@example.com"
+   Sets the commit author email for this repository (replace with your own GitHub-associated email).
+
+3. git init -b main
+   Initializes a new local Git repository and names its default branch main.
+
+4. git add index.html about.html
+   Stages the initial HTML files so they can be included in a commit.
+
+5. git commit -m "Initial commit: add login and about pages"
+   Records the initial project state in the repository history.
+
+6. git add index.html
+   Stages the edited login page for the second commit.
+
+7. git commit -m "Update login page introduction"
+   Saves the HTML modification as a separate commit.
+
+8. git switch -c feature
+   Creates a branch named feature and switches to it.
+
+9. git add about.html
+   Stages the feature-branch change to the About page.
+
+10. git commit -m "Add feature branch project note"
+   Records the feature work on the feature branch.
+
+11. git switch main
+   Switches back to the main branch before merging.
+
+12. git merge --no-ff feature -m "Merge feature branch into main"
+    Merges feature into main and preserves a visible merge commit.
+
+13. git add .gitignore
+    Stages the ignore rules for log files and the temp directory.
+
+14. git commit -m "Add ignore rules for logs and temp folder"
+    Records the .gitignore implementation.
+
+15. git add index.html
+    Stages the temporary change used to demonstrate undoing a commit.
+
+16. git commit -m "Add temporary footer (revert demonstration)"
+    Creates the additional commit that will be undone.
+
+17. git revert --no-edit HEAD
+    Safely undoes the latest commit by creating a new commit that reverses its changes.
+    The original commit remains visible in history, making this suitable for shared repositories.
+
+18. git log --oneline --graph --decorate --all
+    Displays the commit history, branch structure, and merge/revert activity.
+
+19. git status --short --branch
+    Shows the current branch and whether there are uncommitted changes.
+
+20. git check-ignore -v sample.log temp/temporary.txt
+    Verifies which .gitignore rule excludes the sample log and temporary file.
+
+21. git remote add origin https://github.com/YOUR-USERNAME/login-system-git-workflow.git
+    Connects the local repository to the public GitHub repository URL. Replace YOUR-USERNAME.
+
+22. git push -u origin main
+    Pushes the main branch and its complete reachable commit history to GitHub.
+
+23. git push -u origin feature
+    Pushes the feature branch to GitHub so the branch activity is visible remotely.
